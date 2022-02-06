@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class NumberPalindromeTest {
 
     /**
-     * Example Input/Output
+     * Examples of input/output:
      * <br>
      * <li>isPalindrome(-1221); → should return true
      * <li>isPalindrome(707); → should return true

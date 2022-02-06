@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class FirstLastDigitSumTest {
 
     /**
-     * Example input/output
+     * Examples of input/output:
      * <br>
      * <li>sumFirstAndLastDigit(252); → should return 4, the first digit is 2 and the last is 2 which gives us 2+2 and the sum is 4.
      * <li>sumFirstAndLastDigit(257); → should return 9, the first digit is 2 and the last is 7 which gives us 2+7 and the sum is 9.

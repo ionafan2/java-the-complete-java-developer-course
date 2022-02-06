@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class SumOddRangeTest {
 
     /**
-     * Example input/output:
+     * Examples of input/output:
      * <br>
      * <li>isOdd(1); → should return true
      * <li>isOdd(3); → should return true
@@ -25,7 +25,7 @@ class SumOddRangeTest {
     }
 
     /**
-     * Example input/output:
+     * Examples of input/output:
      * <br>
      * <li>sumOdd(1, 100); → should return 2500
      * <li>sumOdd(-1, 100); →  should return -1
