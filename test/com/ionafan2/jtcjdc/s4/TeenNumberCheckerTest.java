@@ -2,8 +2,7 @@ package com.ionafan2.jtcjdc.s4;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class TeenNumberCheckerTest {
 
@@ -33,6 +32,4 @@ class TeenNumberCheckerTest {
         assertTrue(TeenNumberChecker.isTeen(13));
         assertFalse(TeenNumberChecker.isTeen(21));
     }
-
-
 }
