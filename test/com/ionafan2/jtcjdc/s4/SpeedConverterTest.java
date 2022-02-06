@@ -1,6 +1,7 @@
 package com.ionafan2.jtcjdc.s4;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SpeedConverterTest {
@@ -16,10 +17,10 @@ class SpeedConverterTest {
      */
     @Test
     void toMilesPerHour() {
-        assertEquals(SpeedConverter.toMilesPerHour(1.5), 1);
-        assertEquals(SpeedConverter.toMilesPerHour(10.25), 6);
-        assertEquals(SpeedConverter.toMilesPerHour(-5.62), -1);
-        assertEquals(SpeedConverter.toMilesPerHour(25.42), 16);
-        assertEquals(SpeedConverter.toMilesPerHour(75.114), 47);
+        assertEquals(1, SpeedConverter.toMilesPerHour(1.5));
+        assertEquals(6, SpeedConverter.toMilesPerHour(10.25));
+        assertEquals(-1, SpeedConverter.toMilesPerHour(-5.62));
+        assertEquals(16, SpeedConverter.toMilesPerHour(25.42));
+        assertEquals(47, SpeedConverter.toMilesPerHour(75.114));
     }
 }
