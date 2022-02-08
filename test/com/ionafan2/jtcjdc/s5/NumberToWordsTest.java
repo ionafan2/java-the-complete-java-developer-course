@@ -1,28 +1,11 @@
 package com.ionafan2.jtcjdc.s5;
 
+import com.ionafan2.jtcjdc.TestSysOutput;
+
 import org.junit.jupiter.api.Test;
-
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class NumberToWordsTest {
-
-    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-    private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
-    private final PrintStream originalOut = System.out;
-    private final PrintStream originalErr = System.err;
-
-    void setUpStreams() {
-        System.setOut(new PrintStream(outContent));
-        System.setErr(new PrintStream(errContent));
-    }
-
-    void restoreStreams() {
-        System.setOut(originalOut);
-        System.setErr(originalErr);
-    }
+class NumberToWordsTest extends TestSysOutput {
 
     /**
      * Examples of input/output:
