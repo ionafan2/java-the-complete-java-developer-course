@@ -1,8 +1,11 @@
 package com.ionafan2.jtcjdc.s4;
 
+import com.ionafan2.jtcjdc.TestSysOutput;
 import org.junit.jupiter.api.Test;
 
-class MinutesToYearsDaysCalculatorTest {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+class MinutesToYearsDaysCalculatorTest extends TestSysOutput {
 
     /**
      * Examples of input/output:
@@ -13,9 +16,22 @@ class MinutesToYearsDaysCalculatorTest {
      */
     @Test
     void printYearsAndDays() {
-        System.out.println("\nMinutesToYearsDaysCalculator.printYearsAndDays - test results:");
-        MinutesToYearsDaysCalculator.printYearsAndDays(525600);
-        MinutesToYearsDaysCalculator.printYearsAndDays(1051200);
-        MinutesToYearsDaysCalculator.printYearsAndDays(561600);
+        setUpStreams();
+
+        long minutes = 525600;
+        MinutesToYearsDaysCalculator.printYearsAndDays(minutes);
+        String expected1 = minutes + " min = 1 y and 0 d\n";
+
+        minutes = 1051200;
+        MinutesToYearsDaysCalculator.printYearsAndDays(minutes);
+        String expected2 = minutes + " min = 2 y and 0 d\n";
+
+        minutes = 561600;
+        MinutesToYearsDaysCalculator.printYearsAndDays(minutes);
+        String expected3 = minutes + " min = 1 y and 25 d\n";
+
+        assertEquals(expected1 + expected2 + expected3, outContent.toString());
+
+        restoreStreams();
     }
 }
