@@ -14,12 +14,12 @@ public class SpeedConverter {
         return Math.round(kmh / 1.609);
     }
 
-    public static void printConversion(double param) {
+    public static void printConversion(double kmPerHour) {
 
-        if (param < 0) {
+        if (kmPerHour < 0) {
             System.out.println("Invalid Value");
         } else {
-            System.out.println(param + " km/h = " + toMilesPerHour(param) + " mi/h");
+            System.out.println(kmPerHour + " km/h = " + toMilesPerHour(kmPerHour) + " mi/h");
         }
     }
 }

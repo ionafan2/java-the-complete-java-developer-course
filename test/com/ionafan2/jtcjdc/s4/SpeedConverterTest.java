@@ -1,10 +1,11 @@
 package com.ionafan2.jtcjdc.s4;
 
+import com.ionafan2.jtcjdc.TestSysOutput;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class SpeedConverterTest {
+class SpeedConverterTest  extends TestSysOutput {
 
     /**
      * Examples of input/output:
@@ -22,5 +23,27 @@ class SpeedConverterTest {
         assertEquals(-1, SpeedConverter.toMilesPerHour(-5.62));
         assertEquals(16, SpeedConverter.toMilesPerHour(25.42));
         assertEquals(47, SpeedConverter.toMilesPerHour(75.114));
+    }
+
+    @Test
+    void printConversion() {
+
+        setUpStreams();
+
+        double kmPerHour = 1.5;
+        SpeedConverter.printConversion(kmPerHour);
+        String expected1 = kmPerHour + " km/h = " + SpeedConverter.toMilesPerHour(kmPerHour) + " mi/h\n";
+
+        kmPerHour = 10.25;
+        SpeedConverter.printConversion(kmPerHour);
+        String expected2 = kmPerHour + " km/h = " + SpeedConverter.toMilesPerHour(kmPerHour) + " mi/h\n";
+
+        kmPerHour = -1;
+        SpeedConverter.printConversion(kmPerHour);
+        String expected3 = "Invalid Value\n";
+
+        assertEquals( expected1 + expected2 + expected3, outContent.toString());
+
+        restoreStreams();
     }
 }
