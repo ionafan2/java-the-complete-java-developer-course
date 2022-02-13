@@ -36,4 +36,31 @@ public class FlourPacker {
 
         return false;
     }
+
+    public static boolean canPackImproved(int bigCount, int smallCount, int goal) {
+
+        if (bigCount < 0 || smallCount < 0 || goal < 0) {
+            return false;
+        }
+
+        // if (bigCount == 0 || goal < 5) {
+        //     return goal <= smallCount;
+        // }
+
+        // if (goal != (bigCount * 5)) {
+        if (goal <= (bigCount * 5) + smallCount) { // if demand doesn't exceed supply
+            // if (goal > (bigCount * 5)) {
+            //     return (goal - (bigCount * 5)) <= smallCount;
+            // }
+
+            // if (goal < (bigCount * 5)) {
+            // make sure that leftovers from big bag fit into small bags
+            return (goal % 5) <= smallCount;
+            //     }
+
+            // } else {
+            //     return true;
+        }
+        return false;
+    }
 }
