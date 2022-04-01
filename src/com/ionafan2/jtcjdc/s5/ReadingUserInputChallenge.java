@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ReadingUserInputChallenge {
 
-    public static void main(String [] args) {
+    public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
 
@@ -13,23 +13,20 @@ public class ReadingUserInputChallenge {
 
         while (counter <= 10) {
 
-            System.out.println("Enter Number #"+counter+":");
+            System.out.println("Enter Number #" + counter + ":");
 
-            if(scanner.hasNextInt()) {
+            if (scanner.hasNextInt()) {
                 sum += scanner.nextInt();
             } else {
                 System.out.println("Invalid Number");
                 counter--;
             }
-            scanner.nextLine();
 
+            scanner.nextLine();
             counter++;
         }
 
         System.out.println("Sum of all numbers is: " + sum);
-
         scanner.close();
-
-
     }
 }
