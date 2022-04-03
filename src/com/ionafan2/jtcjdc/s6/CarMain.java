@@ -1,6 +1,6 @@
 package com.ionafan2.jtcjdc.s6;
 
-public class Main {
+public class CarMain {
 
     public static void main(String[] args) {
         // State is fields
